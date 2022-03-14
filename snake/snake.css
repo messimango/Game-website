@@ -8,11 +8,17 @@
 
 }
 
+body {
+    background-color: black;
+    color: #FFA500;
+}
+
 nav {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 10vh;
+    width: 100%;
     background-color: rgb(34, 35, 39);
 }
 
@@ -46,6 +52,7 @@ nav {
 }
 
 .links a {
+    text-decoration: none;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -53,6 +60,9 @@ nav {
     align-items: center;
     text-align: center;
     width: 100%;
+    top: 20px;
+    font-size: 25px;
+
 }
 
 .fa {
@@ -76,8 +86,6 @@ nav {
     transition: 1s;
 }
 
-
-
 .links:hover .name {
     position: absolute;
     color: rgb(34, 35, 39);
@@ -91,13 +99,34 @@ nav {
     height: 50px;
     background: #FFA500;
     top: -40%;
-    margin-left: 10px;
+    margin-left: 80px;
     margin-top: 30px;
     border-radius: 50%;
 }
 
+.current {
+    transform: translateY(-10px);
+}
+
+.current:hover {
+    transform: translateY(7px);
+}
+
+.home {
+    transform: translateY(10px);
+}
+
+/* Snake Game */
+
+.title {
+    font-size: 40px;
+    text-align: center;
+    margin: 20px;
+}
+
 canvas{
     box-shadow: black 20px 10px 50px;
+    border: 2px solid red;
 }
 
 body{

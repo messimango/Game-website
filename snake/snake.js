@@ -107,17 +107,17 @@ function isGameOver(){
 function drawScore(){
     ctx.fillStyle = "orange";
     ctx.font = "10px Verdana"
-    ctx.fillText("Score : " + score, canvas.width-50,10);
+    ctx.fillText("Score : " + score, canvas.width-60,10);
 }
 
 
 function clearScreen(){
-    ctx.fillStyle = "black";
+    ctx.fillStyle = "green";
     ctx.fillRect(0,0,canvas.width,canvas.height);
 }
 
 function drawSnake(){
-    ctx.fillStyle = "green";
+    ctx.fillStyle = "blue";
     for(let i = 0 ; i < snakeParts.length; i++){
         let part = snakeParts[i];
         ctx.fillRect(part.x * tileCount, part.y * tileCount, tileSize, tileSize)

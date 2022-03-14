@@ -5,9 +5,6 @@ var both = 0;
 var counter = 0;
 var currentBlocks = [];
 
-
-// move character
-
 function moveLeft(){
     var left = parseInt(window.getComputedStyle(character).getPropertyValue("left"));
     if(left>0){
@@ -64,6 +61,9 @@ var blocks = setInterval(function(){
     var drop = 0;
     if(characterTop <= 0){
         gameOver();
+        alert("Game over. Score: "+(counter-9));
+        clearInterval(blocks);
+        location.reload();
     }
     for(var i = 0; i < currentBlocks.length;i++){
         let current = currentBlocks[i];
@@ -93,10 +93,6 @@ var blocks = setInterval(function(){
         character.style.top = characterTop - 0.5 + "px";
     }
 },1);
-
-
-
-
 
 // GameOver
 const gameover = document.querySelector(".gameover")
