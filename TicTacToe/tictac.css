@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,800;1,200;1,300;1,600&family=Rubik:wght@600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body {
+    background-color: black;
+}
+
+/* nav */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh;
+    background-color: rgb(34, 35, 39);
+}
+
+.nav {
+    width: 480px;
+    height: 70px;
+    background: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+}
+
+.menu-box {
+    display: flex;
+    width: 430px;
+}
+
+.current {
+    transform: translateY(-15px);
+}
+
+.current:hover {
+    transform: none;
+}
+
+.home {
+    transform: translateY(14.5px);
+}
+
+.links {
+    list-style: none;
+    position: relative;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+
+.links a {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.fa {
+    color: rgb(34, 35, 39);
+    line-height: 75px;
+    position: relative;
+    display: block;
+    font-size: 1.5em;
+    transition: 1s;
+    text-align: center;   
+}
+
+.links:hover a .fa {
+    transform: translateY(-20px);
+}
+
+.name {
+    position: absolute;
+    color: transparent;    
+    font-size: 0.75rem;
+    transition: 1s;
+}
+
+.links:hover .name {
+    position: absolute;
+    color: rgb(34, 35, 39);
+    font-size: 0.75rem;
+    transition: 1s;
+}
+
+.highlight {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #FFA500;
+    top: -40%;
+    margin-left: 290px;
+    margin-top: 28px;
+    border-radius: 50%;
+}
+
+/* game */
+
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    height: 100%;
+}
+
+.game-title {
+    font-size: 5vh;
+    padding: 2vh;
+    color: #FFA500;
+}
+
+.game-area {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 13vh);
+    grid-template-rows: repeat(3, 13vh);
+    cursor: pointer;
+}
+
+.game-tiles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10vh;
+    color: #FFA500;
+}
+
+.r-border {
+    border-right: 2vh solid red;
+}
+
+.b-border {
+    border-bottom: 2vh solid red;
+}
+
+/* X and O */
+
+.X-hover:hover::after {
+    content: "X";
+    opacity: 0.5;
+}
+
+
+.O-hover:hover::after {
+    content: "O";
+    opacity: 0.5;
+}
+/* win-lines */
+
+.line {
+    position: absolute;
+    background-color: blue;
+}
+
+.line-row-1 {
+    width: 100%;
+    height: 0.7vh;
+    top: 5.3vh;
+}
+
+.line-row-2 {
+    width: 100%;
+    height: 0.7vh;
+    top: 18vh;
+}
+
+.line-row-3 {
+    width: 100%;
+    height: 0.7vh;
+    top: 32.2vh;
+}
+
+.line-column-1 {
+    width: 0.7vh;
+    height: 100%;
+    left: 5.2vh;
+}
+
+.line-column-2 {
+    width: 0.7vh;
+    height: 100%;
+    left: 18.1vh;
+}
+
+.line-column-3 {
+    width: 0.7vh;
+    height: 100%;
+    left: 32.3vh;
+}
+
+.line-diagonal-1 {
+    width: 90%;
+    height: 0.7vh;
+    left: 5%;
+    top: 50%;
+    transform: skewY(45deg);
+}
+
+.line-diagonal-2 {
+    width: 90%;
+    height: 0.7vh;
+    left: 5%;
+    top: 45%;
+    transform: skewY(-45deg);
+}
+
+/* Winner Box */
+
+.gameover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1vh red solid;
+    margin-top: 5vh;
+    width: 36vh;
+    height: 25vh;
+}
+
+.winner {
+    color: #FFA500;
+    font-size: 5vh;
+    margin: 1vh;
+}
+
+.winner-is {
+    color: #FFA500;
+    font-size: 5vh;
+}
+
+.playagain {
+    background: transparent;
+    color: #FFA500;
+    border: 0.1vh #FFA500 solid;
+    padding: 1vh;
+    font-size: 3vh;
+    cursor: pointer;
+}
+
+/* hide/show winner box */
+.hide {
+    display: none;
+}
+
+.show {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1vh red solid;
+    margin-top: 5vh;
+    width: 36vh;
+    height: 28vh;
+}

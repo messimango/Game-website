@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" onclick="jump()">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jumper</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/6c7ef19b6b.css">
-    <link rel="stylesheet" href="./jumper.css">
+    <link rel="stylesheet" href="tictac.css">
+    <link rel="icon" href="./icon.png">
+    <title>Tic Tac Toe</title>
 </head>
 <body>
     <nav>
@@ -36,8 +37,8 @@
                         <span class="name">Dropper</span>
                     </a>
                 </li>
-                <li class="links">
-                    <a href="../TicTacToe/tictac.html">
+                <li class="links current">
+                    <a href="./tictac.html">
                         <span class="icons fa fa-hashtag"></span>
                         <span class="name">TicTacToe</span>
                     </a>
@@ -48,15 +49,29 @@
                         <span class="name">Dodger</span>
                     </a>
                 </li>
+                <div class="highlight"></div>
             </ul>
         </div>
     </nav>
-    <div id="game">
-        <div id="jumper"></div>
-
-        <div id="hurdles"></div>
-
+    <div class="game">
+        <h1 class="game-title">Tic Tac Toe</h1>
+        <div class="game-area">
+            <div class="game-tiles r-border b-border" data-index="1"></div>
+            <div class="game-tiles r-border b-border" data-index="2"></div>
+            <div class="game-tiles b-border" data-index="3"></div>
+            <div class="game-tiles r-border b-border" data-index="4"></div>
+            <div class="game-tiles r-border b-border" data-index="5"></div>
+            <div class="game-tiles b-border" data-index="6"></div>
+            <div class="game-tiles r-border" data-index="7"></div>
+            <div class="game-tiles r-border" data-index="8"></div>
+            <div class="game-tiles" data-index="9"></div>
+            <div class="line"></div>
+        </div>
+        <div class="gameover hide">
+            <div class="winner">Winner is X</div>
+            <button class="playagain">Play Again</button>
+        </div>
     </div>
+    <script src="./tictac.js"></script>
 </body>
-<script src="./jumper.js"></script>
 </html>
