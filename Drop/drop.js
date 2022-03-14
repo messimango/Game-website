@@ -5,6 +5,9 @@ var both = 0;
 var counter = 0;
 var currentBlocks = [];
 
+
+// move character
+
 function moveLeft(){
     var left = parseInt(window.getComputedStyle(character).getPropertyValue("left"));
     if(left>0){
@@ -60,9 +63,7 @@ var blocks = setInterval(function(){
     var characterLeft = parseInt(window.getComputedStyle(character).getPropertyValue("left"));
     var drop = 0;
     if(characterTop <= 0){
-        alert("Game over. Score: "+(counter-9));
-        clearInterval(blocks);
-        location.reload();
+        gameOver();
     }
     for(var i = 0; i < currentBlocks.length;i++){
         let current = currentBlocks[i];
@@ -92,3 +93,18 @@ var blocks = setInterval(function(){
         character.style.top = characterTop - 0.5 + "px";
     }
 },1);
+
+
+
+
+
+// GameOver
+const gameover = document.querySelector(".gameover")
+const gameoverText = document.querySelector(".gameover-text");
+
+
+function gameOver() {
+    let text = `You Lose Score : ${counter - 9}`;
+    gameoverText.innerText = text;
+    gameover.className = "show";
+}

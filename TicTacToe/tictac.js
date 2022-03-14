@@ -145,3 +145,7 @@ function startNewGame() {
     playAgainSound.play();
     hover();
 }
+
+
+clearInterval(blocks);
+location.reload();
