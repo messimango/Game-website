@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" onclick="jump()">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jumper</title>
+    <link rel="stylesheet" href="./pacman.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/6c7ef19b6b.css">
-    <link rel="stylesheet" href="./jumper.css">
+    <link rel="icon" href="./icon.png">
+    <title>Pac-Man</title>
 </head>
 <body>
     <nav>
@@ -24,8 +25,8 @@
                         <span class="name">Snake</span>
                     </a>
                 </li>
-                <li class="links">
-                    <a href="#">
+                <li class="links current">
+                    <a href="./pacman.html">
                         <span class="icons fa fa-snapchat-ghost"></span>
                         <span class="name">Pacman</span>
                     </a>
@@ -48,15 +49,15 @@
                         <span class="name">Tetris</span>
                     </a>
                 </li>
+                <div class="highlight"></div>
             </ul>
         </div>
     </nav>
-    <div id="game">
-        <div id="jumper"></div>
-
-        <div id="hurdles"></div>
-
+    <div class="pacman">
+        <h1 class="title">Pac-Man</h1>
+        <canvas class="game"></canvas>
     </div>
+
+    <script src="./src/game.js" type="module"></script>
 </body>
-<script src="./jumper.js"></script>
 </html>
