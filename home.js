@@ -14,9 +14,16 @@ const games = [
         link: "./TicTacToe/tictac.html",
         description: "Two players seek in alternate turns to complete a row, a column, or a diagonal with either three O's or three X's drawn in the spaces of a grid of nine squares.",
     },
-
     {
         id: 3,
+        name: "Rock Paper Scissor",
+        image: "./images/RPS.PNG",
+        link: "./RockPaperScissors/rps.html",
+        description: "Play a classic game of Rock Paper Scissors",
+    }, 
+
+    {
+        id: 4,
         name: "Dropper",
         image: "./images/dropper.png",
         link: "./Drop/drop.html",
@@ -24,10 +31,10 @@ const games = [
     },
     {
         id: 5,
-        name: "Rock Paper Scissor",
-        image: "./images/RPS.PNG",
-        link: "./RockPaperScissors/rps.html",
-        description: "Play a classic game of Rock Paper Scissors",
+        name: "One Piece Card Match",
+        image: "./images/OPcards.png",
+        link: "./CardMatch/card.html",
+        description: "A card game in which all of the cards are laid face down on a surface and two cards are flipped face up over each turn. The object of the game is to turn over pairs of matching cards.",
     }, 
 
     {
