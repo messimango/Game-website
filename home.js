@@ -22,16 +22,21 @@ const games = [
         link: "./Drop/drop.html",
         description: "A ball in freefall must avoid to roof and fall through the cracks in the floor.",
     },
+    {
+        id: 5,
+        name: "Rock Paper Scissor",
+        image: "./images/RPS.PNG",
+        link: "./RockPaperScissors/rps.html",
+        description: "Play a classic game of Rock Paper Scissors",
+    }, 
 
     {
-        id: 4,
+        id: 6,
         name: "Jumper",
         image: "./images/jumper.png",
         link: "./Jumper/jumper.html",
         description: "Jump over block coming at you at high speeds",
-    },
-
-    
+    },  
 ];
 
 const gameList = document.querySelector(".gamelist")
