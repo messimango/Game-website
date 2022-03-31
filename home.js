@@ -47,8 +47,14 @@ const games = [
         image: "./images/RPS.PNG",
         link: "./RockPaperScissors/rps.html",
         description: "Play a classic game of Rock Paper Scissors",
+    },
+    {
+        id: 10,
+        name: "BlackJack",
+        image: "./images/blackjack.png",
+        link: "./Blackjack/blackjack.html",
+        description: "Play the card game Blackjack.",
     }, 
-
     {
         id: 4,
         name: "Dropper",

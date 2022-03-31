@@ -12,6 +12,14 @@ const dealerAmount = document.querySelector('.dealer-amount')
 var dealer = 0;
 var player = 0;
 
+const totalWins = document.querySelector('.win-amount')
+const totalTies = document.querySelector('.tie-amount')
+const totalLoss = document.querySelector('.loss-amount')
+
+var playerScore = 0;
+var dealerScore = 0;
+var ties = 0;
+
 function hit() {
     if (dealer == 0) {
         player = Math.floor(Math.random()*10 + 1);
@@ -34,6 +42,8 @@ function checkPlayer() {
     } else if (player > 21) {
         endtext.innerHTML = 'You Lose!'
         gameend.classList.remove('hidden')
+        dealerScore = dealerScore + 1;
+        totalLoss.innerHTML = dealerScore;
     }
 }
 
@@ -66,13 +76,36 @@ function checkDealer() {
     if (dealer > 21) {
         endtext.innerHTML = 'You Win!'
         gameend.classList.remove('hidden')
+        playerScore = playerScore + 1;
+        totalWins.innerHTML = playerScore;
     } else if (dealer > player) {
         endtext.innerHTML = 'You Lose!'
         gameend.classList.remove('hidden')
+        dealerScore = dealerScore + 1;
+        totalLoss.innerHTML = dealerScore;
     } else if (dealer < player) {
         stay();
     } else if (dealer == 21 && player == 21) {
         endtext.innerHTML = "It's a Tie!"
         gameend.classList.remove('hidden')
+        ties = ties + 1;
+        totalTies.innerHTML = ties;
     }
+}
+
+
+
+
+
+// reset score
+
+const resetButton = document.querySelector('.reset')
+
+function resetScore() {
+    playerScore = 0;
+    dealerScore = 0;
+    ties = 0;
+    totalWins.innerHTML = playerScore;
+    totalLoss.innerHTML = dealerScore;
+    totalTies.innerHTML = ties;
 }

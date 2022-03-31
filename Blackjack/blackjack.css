@@ -108,6 +108,31 @@ header {
     margin: 20px;
 }
 
+/* score */
+.score {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border: 1px red solid;
+}
+
+.score div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.reset {
+    margin: 5px;
+    font-size: 20px;
+    background-color: blue;
+    color: #FFA500;
+    border: 1px solid blue;
+    padding: 5px;
+    cursor: pointer;
+}
+
 .game-area {
     display: grid;
     grid-template-columns: 400px 400px;
