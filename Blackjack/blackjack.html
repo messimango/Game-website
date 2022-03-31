@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./blackjack.png">
+    <link rel="stylesheet" href="./blackjack.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/6c7ef19b6b.css">
+    <title>Blackjack</title>
+</head>
+
+<body>    
+    <nav>
+        <div class="nav">
+            <ul class="menu-box">
+                <li class="links">
+                    <a href="../home.html">
+                        <span class="icons fa fa-home current"></span>
+                        <span class="name">Home</span>
+                    </a>
+                </li>
+                <li class="links">
+                    <a href="../snake/snake.html">
+                        <span class="icons fa fa-apple"></span>
+                        <span class="name">Snake</span>
+                    </a>
+                </li>
+                <li class="links">
+                    <a href="../Pac-Man/pacman.html">
+                        <span class="icons fa fa-snapchat-ghost"></span>
+                        <span class="name">Pacman</span>
+                    </a>
+                </li>
+                <li class="links">
+                    <a href="../Drop/drop.html">
+                        <span class="icons fa fa-circle"></span>
+                        <span class="name">Dropper</span>
+                    </a>
+                </li>
+                <li class="links">
+                    <a href="../TicTacToe/tictac.html">
+                        <span class="icons fa fa-hashtag"></span>
+                        <span class="name">TicTacToe</span>
+                    </a>
+                </li>
+                <li class="links">
+                    <a href="../Tetris/tetris.html">
+                        <span class="icons fa fa-braille"></span>
+                        <span class="name">Tetris</span>
+                    </a>
+                </li>
+                <div class="highlight"></div>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>Blackjack</header>
+
+        <div class="game-area">
+            <div class="player">
+                <div class="pcard">
+
+                </div>
+                <h1>Player: <span class="player-amount">0</span></h1>
+            </div>
+
+            <div class="dealer">
+                <div class="dcard">
+
+                </div>
+                <h1>Dealer: <span class="dealer-amount">0</span></h1>
+            </div>      
+
+        </div>
+        
+        <div class="buttons">
+            <button class="hit" onclick="hit()">Hit</button>
+            <button class="stay" onclick="stay()">Stay</button>
+        </div>
+    </div>
+
+    <div class="gameend hidden">
+        <h1><span class="endtext">You Win!</span></h1>
+        <button onclick="playAgain()">Play Again?</button>
+    </div>
+
+
+    <footer>
+        <div class="footer-box">
+            <div class="socials-link">
+            <a href=""><i class="fa fa-github"></i></a>
+            <a href=""></a>
+            <a href=""></a>
+            </div>
+            <h1 class="author">Coded by Umang Poudyal</h1>
+        </div>  
+    </footer>
+
+    <script src="./blackjack.js"></script>
+</body>
+</html>
